@@ -45,10 +45,37 @@ app.controller("benCtrl", function ($scope, $http, $filter) {
 });
 //---------------------------------------------Controller for Ciclos-------------------------------------------
 app.controller("cicCtrl", function ($scope, $http, $filter) {
+    $scope.reiniciar = function () {
+        $scope.ciclo = null;
+        $scope.requerido = false;
+        $scope.txtclave = null;
+        $scope.txtdesc = null;
+        $scope.txtinicio =null;
+        $scope.txtfin = null;
+        console.log($scope.txtinicio);
+    }
+    $scope.reiniciar();
     $http.get('../Services/getService.asmx/getCiclos').then(function (response) { $scope.ciclos = response.data; });
+    
 
-    $scope.ciclo = null;
-
+    $scope.insertCiclo = function () {
+        if ($scope.txtinicio != null) {
+            var inicio = $filter('date')($scope.txtinicio, 'yyyy-MM-dd');
+        }
+        else {
+            var inicio = $filter('date')(new Date('12/31/1900'), 'yyyy-MM-dd');
+        }
+        if ($scope.txtfin != null) {
+            var fin = $filter('date')($scope.txtfin, 'yyyy-MM-dd');
+        }
+        else {
+            var fin = $filter('date')(new Date('12/31/1900'), 'yyyy-MM-dd');
+        }
+        $http.get('../Services/postService.asmx/postCiclo', {
+            params: { 'ciclo_des': $scope.txtdesc, 'estatus': '1', 'ciclo_cve': $scope.txtclave, 'fecha_apertura': inicio, 'fecha_cierre': fin }
+        }).then(function onSuccess(response) { $scope.value = response.data; alertify.success($scope.value); })
+          .catch(function onError(response) { $scope.value = response.data; alertify.error('Ha ocurrido un error'); console.log($scope.value); $scope.requerido = true; });
+    }
 
 });
 

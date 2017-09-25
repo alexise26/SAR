@@ -18,30 +18,33 @@
                 </div>
                 <div class="col-xs-12 caja">
                     <div class="col-xs-12 col-sm-3 first last">
-                        <p>CLAVE DEL CICLO</p>
-                        <input type="text" class="form-control" value="" name="txtclave" placeholder="ej. PV2017" />
+                        <p>CLAVE DEL CICLO <span class="required-mark" ng-if="requerido == true">***</span></p>
+                        <input type="text" class="form-control" value="" name="txtclave" ng-model="txtclave" placeholder="ej. PV2017"  required/>
                     </div>
                     <div class="col-xs-12 col-sm-3 first last">
-                        <p>DESCRIPCIÓN DEL CICLO</p>
-                        <input type="text" class="form-control" value="" name="txtdesc" placeholder="ej. PRIMAVERA-VERANO 2017" />
+                        <p>DESCRIPCIÓN DEL CICLO <span class="required-mark" ng-if="requerido == true">***</span></p>
+                        <input type="text" class="form-control" value="" name="txtdesc" ng-model="txtdesc" placeholder="ej. PRIMAVERA-VERANO 2017" required/>
                     </div>
                     <div class="col-xs-12 col-sm-3 first last">
                         <p>FECHA DE INICIO</p>
-                        <input type="date" class="form-control" value="" name="txtinicio" placeholder="dd/mm/yyyy" />
+                        <input type="date" class="form-control" value="" name="txtinicio" ng-model="txtinicio" placeholder="dd/mm/yyyy"  />
                     </div>
                     <div class="col-xs-12 col-sm-3 first last">
                         <p>FECHA DE FIN</p>
-                        <input type="date" class="form-control" value="" name="txtfin" placeholder="dd/mm/yyyy" />
+                        <input type="date" class="form-control" value="" name="txtfin" ng-model="txtfin" placeholder="dd/mm/yyyy" />
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-xs-12 col-sm-offset-7 col-sm-5 ">
-                    <div class="col-xs-12 col-sm-6 first ">
+                <div class="col-xs-12 ">
+                    <div class="col-xs-12 col-sm-6 first text-left">
+                        <p  class="required-mark" ng-if="requerido == true">*** Campos requeridos</p>
+                    </div>
+                    <div class="col-xs-12 col-sm-3 first ">
                         <input type="submit" class="btn btn-warning btn-block" value="Reiniciar" name="btnreiniciar" />
                     </div>
-                    <div class="col-xs-12 col-sm-6 first">
-                        <input type="submit" class="btn btn-success btn-block" value="Guardar" name="btnguardar" />
+                    <div class="col-xs-12 col-sm-3 first">
+                        <input  class="btn btn-success btn-block" value="Guardar" ng-click="insertCiclo()" name="btnguardar" />
                     </div>
                 </div>
             </div>

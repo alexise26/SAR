@@ -106,11 +106,20 @@ namespace SAR.Data
 
                         break;
                     case "D":
-
-                        DateTime ValueDate = DateTime.Parse(value); //Convierte el valor a fecha
-                        par[i] = cmd.Parameters.Add(param, OracleDbType.Date);
-                        par[i].Direction = ParameterDirection.Input;
-                        par[i].Value = ValueDate;
+                        if (value != null)
+                        {
+                            DateTime ValueDate = DateTime.Parse(value); //Convierte el valor a fecha
+                            par[i] = cmd.Parameters.Add(param, OracleDbType.Date);
+                            par[i].Direction = ParameterDirection.Input;
+                            par[i].Value = ValueDate;
+                        }
+                        else
+                        {
+                            par[i] = cmd.Parameters.Add(param, OracleDbType.Date);
+                            par[i].Direction = ParameterDirection.Input;
+                            par[i].Value = null;
+                        }                        
+                       
 
                         break;
                     case "F":

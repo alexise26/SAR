@@ -2208,6 +2208,10 @@
   <ItemGroup>
     <Compile Include="Data\DataClass.cs" />
     <Compile Include="Models\Beneficiario.cs" />
+    <Compile Include="Models\Ciclo.cs" />
+    <Compile Include="Models\ProductoAg.cs" />
+    <Compile Include="Models\Solicitud.cs" />
+    <Compile Include="Models\SolicitudAg.cs" />
     <Compile Include="Services\postService.asmx.cs">
       <DependentUpon>postService.asmx</DependentUpon>
       <SubType>Component</SubType>

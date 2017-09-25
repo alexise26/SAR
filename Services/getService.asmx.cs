@@ -27,8 +27,9 @@ namespace SAR.Services
         {
             return "Hola a todos";
         }
-
+        
         [WebMethod]
+        //Get all "Ciclos"  by http.get
         public void getCiclos()
         {
             String sql = "Select * from VW_CICLOS";
@@ -42,7 +43,9 @@ namespace SAR.Services
             string jsonString = JsonConvert.SerializeObject(dt);
             Context.Response.Write(jsonString);
         }
+        
         [WebMethod]
+        //Get all "Estados"  by http.get
         public void getEstados()
         {
             String sql = "Select * from ESTADOS";
@@ -57,7 +60,10 @@ namespace SAR.Services
             Context.Response.Write(jsonString);
 
         }
+
+        
         [WebMethod]
+        //Get all "Municipios"  by http.get
         public void getMunicipios()
         {
             String sql = "Select * from MUNICIPIOS";
@@ -73,6 +79,7 @@ namespace SAR.Services
 
         }
         [WebMethod]
+        //Get  "Localidades" that belong to selected "Municipio"  by http.get
         public void getLocalidades(int mun_id)
         {
             String municipio;
@@ -95,6 +102,7 @@ namespace SAR.Services
             Context.Response.Write(jsonString);
         }
         [WebMethod]
+        //Get all "Tipos Agricultura"  by http.get
         public void getTipoAgricultura()
         {
             String sql = "Select * from TIPO_AGRICULTURA";
@@ -108,7 +116,9 @@ namespace SAR.Services
             string jsonString = JsonConvert.SerializeObject(dt);
             Context.Response.Write(jsonString);
         }
+        
         [WebMethod]
+        //Get all "Productos"  by http.get
         public void getProductos()
         {
             String sql = "Select * from VW_PRODUCTOS";
@@ -123,6 +133,7 @@ namespace SAR.Services
             Context.Response.Write(jsonString);
         }
         [WebMethod]
+        //Get all "Beneficiarios"  by http.get
         public void getBeneficiarios()
         {
             String sql = "Select * from VW_BENEFICIARIOS";
@@ -136,7 +147,9 @@ namespace SAR.Services
             string jsonString = JsonConvert.SerializeObject(dt);
             Context.Response.Write(jsonString);
         }
+        
         [WebMethod]
+        //Get all "Tipos Solicitud"  by http.get
         public void getTipoSolicitud()
         {
             String sql = "Select * from TIPO_SOLICITUD";
