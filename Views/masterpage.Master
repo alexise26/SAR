@@ -1,0 +1,200 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="masterpage.master.cs" Inherits="SAR.masterpage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sistema de Apoyos</title>
+
+    <!-- Global stylesheets -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css" />
+    <link href="assets/css/icons/icomoon/styles.css" rel="stylesheet" type="text/css" />
+    <!-- CSS Alertify -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.0/build/css/alertify.min.css" />
+    <!-- Default theme Alertify -->
+    <link rel="stylesheet"  href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.0/build/css/themes/default.min.css" />
+    <!-- Semantic UI theme Alertify-->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.0/build/css/themes/semantic.min.css" />
+    <link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/core.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/components.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/styleMain.css" rel="stylesheet" type="text/css" />
+    <!-- /global stylesheets -->
+
+   
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <!-- Main navbar -->
+            <div class="navbar navbar-inverse">
+                <div class="navbar-header">
+                    <a href="frmInicio.aspx">
+                        <img src="assets/images/logo_light.png" style="margin-left: 8px;" alt=""></a>
+
+                    <ul class="nav navbar-nav visible-xs-block">
+                        <li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-tree5"></i></a></li>
+                        <li><a class="sidebar-mobile-main-toggle"><i class="icon-paragraph-justify3"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="navbar-collapse collapse" id="navbar-mobile">
+                    <ul class="nav navbar-nav">
+                        <li><a class="sidebar-control sidebar-main-toggle hidden-xs"><i class="icon-paragraph-justify3"></i></a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown dropdown-user">
+                            <a class="dropdown-toggle" data-toggle="dropdown">
+                                <img src="assets/images/placeholder.jpg" alt="">
+                                <span>Alexis</span>
+                                <i class="caret"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li><a href="#"><i class="icon-cog5"></i>Cambiar Contraseña</a></li>
+                                <li><a href="#"><i class="icon-switch2"></i>Cerrar Sesión</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /main navbar -->
+
+
+            <!-- Page container -->
+            <div class="page-container">
+
+                <!-- Page content -->
+                <div class="page-content">
+
+                    <!-- Main sidebar -->
+                    <div class="sidebar sidebar-main">
+                        <div class="sidebar-content">
+
+                            <!-- User menu -->
+                            <div class="sidebar-user">
+                                <div class="category-content">
+                                    <div class="media">
+                                        <a href="#" class="media-left">
+                                            <img src="assets/images/placeholder.jpg" class="img-circle img-sm" alt=""></a>
+                                        <div class="media-body">
+                                            <span class="media-heading text-semibold">Alexis Escalante</span>
+                                            <div class="text-size-mini text-muted">
+                                                <i class="icon-gear text-size-small"></i>&nbsp;Administrador
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /user menu -->
+
+
+                            <!-- Main navigation -->
+                            <div class="sidebar-category sidebar-category-visible">
+                                <div class="category-content no-padding">
+                                    <ul class="navigation navigation-main navigation-accordion">
+
+                                        <!-- Main -->
+                                        <li class="navigation-header"><span>MENÚ</span> <i class="icon-menu" title="Menú"></i></li>
+                                        <li class="active"><a href="frmInicio.aspx"><i class="icon-home4"></i><span>Inicio</span></a></li>
+                                        <li>
+                                            <a href="#"><i class="icon-stack2"></i><span>Capturar</span></a>
+                                            <ul>
+                                                <li><a href="frmBeneficiarios.aspx">Beneficiario</a></li>
+                                                <li class="navigation-divider"></li>
+                                                <li><a href="frmAgricola.aspx">Solicitud Agrícola</a></li>
+                                                <li class="navigation-divider"></li>
+                                                <li><a href="frmPecuario.aspx">Solicitud Pecuaria</a></li>
+                                                <li class="navigation-divider"></li>
+                                                <li><a href="frmCiclos.aspx">Ciclos</a></li>
+                                                <li class="navigation-divider"></li>
+                                                <li><a href="frmProductos.aspx">Productos Agrícolas</a></li>
+                                                <li class="navigation-divider"></li>
+                                                <li><a href="frmEspecies.aspx">Especies</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="icon-copy"></i><span>Validar</span></a>
+                                            <ul>
+                                                <li><a href="../../../layout_1/LTR/index.html" id="layout1">Layout 1</a></li>
+                                                <li><a href="index.html" id="layout2">Layout 2 <span class="label bg-warning-400">Current</span></a></li>
+                                                <li class="disabled"><a href="../../../layout_6/LTR/index.html" id="layout6">Layout 6 <span class="label label-transparent">Coming soon</span></a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="icon-copy"></i><span>Reportes</span></a>
+                                            <ul>
+                                                <li><a href="colors_primary.html">Primary palette</a></li>
+                                                <li class="navigation-divider"></li>
+                                                <li><a href="colors_pink.html">Pink palette</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="icon-stack"></i><span>Ajustes</span></a>
+                                            <ul>
+                                                <li><a href="starters/1_col.html">1 column</a></li>
+                                                <li>
+                                                    <a href="#">3 columns</a>
+                                                    <ul>
+                                                        <li><a href="starters/3_col_dual.html">Dual sidebars</a></li>
+                                                        <li><a href="starters/3_col_double.html">Double sidebars</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="starters/4_col.html">4 columns</a></li>
+                                            </ul>
+                                        </li>
+                                        <!-- /page kits -->
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- /main navigation -->
+
+                        </div>
+                    </div>
+                    <!-- /main sidebar -->
+
+
+                    <!-- Main content -->
+                    <div class="content-wrapper fondo">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                    <!-- /main content -->
+
+                </div>
+                <!-- /page content -->
+
+            </div>
+            <!-- /page container -->
+
+        </div>
+    </form>
+     <!-- Core JS files -->
+    <script type="text/javascript" src="assets/js/plugins/loaders/pace.min.js"></script>
+    <script type="text/javascript" src="assets/js/core/libraries/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/core/libraries/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/loaders/blockui.min.js"></script>
+    <!-- /core JS files -->
+
+    <!-- Theme JS files -->
+    <script type="text/javascript" src="assets/js/plugins/visualization/d3/d3.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/visualization/d3/d3_tooltip.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/forms/styling/switchery.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/forms/styling/uniform.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/forms/selects/bootstrap_multiselect.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/ui/moment/moment.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/pickers/daterangepicker.js"></script>
+
+    <script type="text/javascript" src="assets/js/core/app.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.11.0/build/alertify.min.js"></script>
+    <%--<script type="text/javascript" src="assets/js/pages/dashboard.js"></script>--%>
+    <script type="text/javascript" src="assets/js/angular.min.js"></script>
+    <script type="text/javascript" src="../Controllers/app.js"></script>
+    <!-- /theme JS files -->
+</body>
+</html>

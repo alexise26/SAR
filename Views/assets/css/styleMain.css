@@ -1,0 +1,28 @@
+﻿body {
+}
+.required-mark {
+    color:red;
+    font-size:15px;
+}
+.fondo {
+    background-color:#efefef;
+}
+.titulo {
+    margin-top:20px;
+    margin-bottom:5px;
+}
+.caja {
+    background-color:#fff;
+    border:1px solid #cecece;
+    border-radius:5px;
+    text-align:center;
+}
+.first {
+    margin-top:20px;
+}
+.last {
+    margin-bottom:20px;
+}
+.estatus-label {
+    width:100px;
+}
